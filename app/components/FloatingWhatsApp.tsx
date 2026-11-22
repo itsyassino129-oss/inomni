@@ -3,9 +3,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { Send, X } from 'lucide-react';
-import { CONSTANTS } from '@/lib/seo';
-
-const BRAND = CONSTANTS.BRAND_NAME;
+const BRAND = 'D.TV';
+const WHATSAPP_NUMBER = '212723870095';
 
 // ---------------------------------------------------------------------------
 // TYPES
@@ -32,7 +31,7 @@ function buildInitialHistory(): ChatMessage[] {
     {
       id: 'welcome',
       sender: 'support',
-      text: `Hello! How can we assist you with ${BRAND} today?`,
+      text: `Welcome to D.TV! 👋\nNeed help choosing a plan or activating your subscription? Our support team is here to assist you.`,
       time: getCurrentTime(),
     },
   ];
@@ -167,12 +166,8 @@ export default function FloatingWhatsApp() {
     ]);
     setMessage('');
 
-    const url = `${CONSTANTS.CONTACT.whatsappUrl}?text=${encodeURIComponent(trimmed)}`;
-    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-
-    if (!newWindow) {
-      window.location.href = url;
-    }
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(trimmed)}`;
+    window.location.assign(url);
   }, [message]);
 
   const handleKeyDown = useCallback(
@@ -191,7 +186,7 @@ export default function FloatingWhatsApp() {
       {!open && showBubble && (
         <div className="fixed bottom-28 right-6 z-[30] whatsapp-animate-fade-in whatsapp-element">
           <div className="bg-gradient-to-r from-green-500 to-green-600 shadow-lg rounded-2xl px-4 py-2.5 text-sm font-medium text-white relative max-w-[220px]">
-            Need help? Chat with us!
+            Need assistance? Chat with D.TV!
             <div
               className="absolute -bottom-2 right-6 w-4 h-4 bg-gradient-to-r from-green-500 to-green-600 rotate-45"
               aria-hidden="true"
@@ -242,7 +237,7 @@ export default function FloatingWhatsApp() {
                   {BRAND} Support
                 </p>
                 <p className="text-[10px] sm:text-xs opacity-90 truncate">
-                  US Support • Typically responds in minutes
+                  Subscription & Activation Support
                 </p>
               </div>
             </div>
@@ -314,7 +309,7 @@ export default function FloatingWhatsApp() {
               id="whatsapp-chat-input"
               ref={inputRef}
               type="text"
-              placeholder="Type a message..."
+              placeholder="How can we help you?"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               onKeyDown={handleKeyDown}
