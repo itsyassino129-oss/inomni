@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+
+/* CHANNELS — NAVY & GOLD THEME */
+:root {
+  --channels-navy: #0a1b59;
+  --channels-gold: #ffd700;
+}
+
+/* Hero background */
+.channels-hero {
+  background: #0a1b59 !important;
+}
+
+/* Gold accents */
+.channels-page .text-red-500,
+.channels-page .text-rose-500,
+.channels-page .text-pink-500 {
+  color: #ffd700 !important;
+}
+
+.channels-page .bg-red-500,
+.channels-page .bg-rose-500,
+.channels-page .bg-pink-500 {
+  background-color: #ffd700 !important;
+}
+
+.channels-page .border-red-500,
+.channels-page .border-rose-500 {
+  border-color: #ffd700 !important;
+}
+
+/* Channel cards hover */
+.channels-page .channel-card:hover {
+  border-color: #ffd700 !important;
+  box-shadow: 0 8px 28px rgba(255, 215, 0, 0.18) !important;
+}
+
+.channels-page .channel-card:hover h3 {
+  color: #b8860b !important;
+}

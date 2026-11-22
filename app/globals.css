@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #071b5c;
+  --color-navy-dark: #040f36;
+  --color-navy-light: #0d2a85;
+  --color-cream: #f0ebd8;
+  --color-yellow: #fff3b0;
+  --color-gold: #ffd700;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Modern Glass & Gradient Utilities */
+.glass-navy {
+  background: rgba(7, 27, 92, 0.72);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 243, 176, 0.18);
+}
+
+.glass-card-light {
+  background: linear-gradient(145deg, #ffffff 0%, #f0ebd8 100%);
+  border: 1px solid rgba(255, 243, 176, 0.6);
+}
+
+/* Primary Gold CTA Button */
+.btn-gold {
+  background: linear-gradient(135deg, #ffd700 0%, #ffea70 100%);
+  color: #040f36;
+  font-weight: 900;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgba(255, 215, 0, 0.35);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 15px 30px -5px rgba(255, 215, 0, 0.5);
+  background: #ffdf33;
+}
+
+
+/* CHANNELS — NAVY & GOLD THEME */
+:root {
+  --channels-navy: #0a1b59;
+  --channels-gold: #ffd700;
+}
+
+/* Hero background */
+.channels-hero {
+  background: #0a1b59 !important;
+}
+
+/* Gold accents */
+.channels-page .text-red-500,
+.channels-page .text-rose-500,
+.channels-page .text-pink-500 {
+  color: #ffd700 !important;
+}
+
+.channels-page .bg-red-500,
+.channels-page .bg-rose-500,
+.channels-page .bg-pink-500 {
+  background-color: #ffd700 !important;
+}
+
+.channels-page .border-red-500,
+.channels-page .border-rose-500 {
+  border-color: #ffd700 !important;
+}
+
+/* Channel cards hover */
+.channels-page .channel-card:hover {
+  border-color: #ffd700 !important;
+  box-shadow: 0 8px 28px rgba(255, 215, 0, 0.18) !important;
+}
+
+.channels-page .channel-card:hover h3 {
+  color: #b8860b !important;
+}
