@@ -70,7 +70,7 @@ export const CONSTANTS = {
   CONTACT: {
     email: 'support@dodoiptv.pro', // ⚠️ Replace with your real support email
     phone: '+1 555 010 0199', // ⚠️ Replace with your real US number
-    whatsapp: '+1 555 010 0199', // ⚠️ Replace with your real WhatsApp number
+    whatsapp: '212723870095', // ⚠️ Replace with your real WhatsApp number
     whatsappUrl: 'https://dodoiptv.pro/support', // ⚠️ Replace with your real wa.me link
     supportHours: '24/7 US Customer Support via Email and Live Chat',
   },
