@@ -63,8 +63,7 @@ const VIP_FEATURES = [
   '24/7 VIP Priority Support via Live Chat',
 ] as const;
 
-const FREE_TRIAL_MESSAGE =
-  "Hi! I would like to request a free 24-hour trial to test the DODO TV AND DODO IPTV sports, movies and live TV streaming quality on my device before I subscribe.";
+
 
 // ---------------------------------------------------------------------------
 // Payment Method SVG Icons — US & Global Standard
@@ -189,8 +188,13 @@ function FeatureList({
 // Live chat helper
 // ---------------------------------------------------------------------------
 function openLiveChat(message: string) {
-  const url = `${CONSTANTS.CONTACT.whatsappUrl}?text=${encodeURIComponent(message)}`;
-  window.open(url, '_blank', 'noopener,noreferrer');
+  try {
+    const url = new URL(CONSTANTS.CONTACT.whatsappUrl);
+    url.searchParams.set('text', message);
+    window.location.assign(url.toString());
+  } catch (error) {
+    console.error('Invalid WhatsApp URL in CONSTANTS.CONTACT.whatsappUrl:', error);
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -202,13 +206,15 @@ export default function PricingSection() {
 
   const handleLiveChatRedirect = (months: Duration) => {
     const selectedPrice = currentPricing[months].total;
-    const noun = devices > 1 ? 'devices' : 'device';
-    openLiveChat(
-      `Hi! I would like to order a ${months}-month DODO TV subscription for ${devices} ${noun} for $${selectedPrice}. Please send me the step by step setup guide on live chat so we can get started.`
-    );
+    const planName = months === 12 ? '12 Months VIP' : `${months} Months`;
+    const deviceLabel = `${devices} ${devices === 1 ? 'Device' : 'Devices'}`;
+    const message = `Hello D.TV Team 👋\n\nI'd like to subscribe to the ${planName} plan (${deviceLabel} - $${selectedPrice}) from your website.\n\nCould you assist me with activation?`;
+    openLiveChat(message);
   };
 
-  const handleFreeTrialRedirect = () => openLiveChat(FREE_TRIAL_MESSAGE);
+  const handleFreeTrialRedirect = () => {
+    openLiveChat('Hello D.TV Team 👋\n\nI would like to request a free 24-hour trial from your website. Could you assist me?');
+  };
 
   return (
     <section
