@@ -187,16 +187,17 @@ function FeatureList({
 // ---------------------------------------------------------------------------
 // Live chat helper
 // ---------------------------------------------------------------------------
+
 function openLiveChat(message: string) {
-  try {
-    const url = new URL(CONSTANTS.CONTACT.whatsappUrl);
-    url.searchParams.set('text', message);
-    window.location.assign(url.toString());
-  } catch (error) {
-    console.error('Invalid WhatsApp URL in CONSTANTS.CONTACT.whatsappUrl:', error);
-  }
+  const whatsappNumber = '212723870095';
+
+  const whatsappUrl =
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.location.href = whatsappUrl;
 }
 
+ 
 // ---------------------------------------------------------------------------
 // MAIN COMPONENT
 // ---------------------------------------------------------------------------
