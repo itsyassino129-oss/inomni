@@ -166,7 +166,15 @@ export default function FloatingWhatsApp() {
     ]);
     setMessage('');
 
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(trimmed)}`;
+    const whatsappMessage = [
+      'Hello D.TV Support 👋',
+      '',
+      "I'm contacting you through the D.TV website live chat.",
+      '',
+      `My message: ${trimmed}`,
+    ].join('\n');
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
     window.location.assign(url);
   }, [message]);
 
