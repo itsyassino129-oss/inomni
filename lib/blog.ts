@@ -401,7 +401,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "11 min read",
     featured: false,
     content: `
-      \${ARTICLE_STYLE_BLOCK}
+      ${ARTICLE_STYLE_BLOCK}
 
       <div class="hero-callout">
         An M3U8 is the file format behind almost every IPTV playlist on the planet. It is a plain text map that tells your player where video lives, how it is split into segments, and what quality variants are available. If you want to understand why your DODO IPTV streams either run smooth at 4K or stutter during an NFL game, <strong>this is the file that decides it</strong>.
@@ -661,12 +661,12 @@ export const blogPosts: BlogPost[] = [
       </div>
 
       <div class="faq-container">
-        \${buildFAQItem('What is an M3U8 file in simple terms?', 'An M3U8 file is a plain text playlist that describes how an IPTV stream should be delivered. It lists the URLs the player needs to fetch, along with metadata about bitrates, durations, and stream variants. Your IPTV player reads the M3U8 and builds the channel interface you actually use. Without an M3U8 or Xtream Codes login, the player has nothing to display.', true, 0)}
-        \${buildFAQItem('Is M3U8 better than M3U?', 'Yes, in almost every way that matters. M3U8 uses UTF-8 encoding so international channel names display correctly, supports HLS natively for smooth live streaming, and handles adaptive bitrate so the picture can switch quality without freezing. M3U is the older format and cannot match any of that. Every serious IPTV service today uses M3U8.', false, 1)}
-        \${buildFAQItem('Do I need to understand M3U8 to use DODO IPTV?', 'No. Once your DODO TV subscription is live, the M3U8 sits behind the scenes. Your player handles everything automatically. You only need to understand the format if you are troubleshooting a specific issue, or if you are manually loading credentials into a player for the first time. Our support team does the technical side for every new subscriber on WhatsApp.', false, 2)}
-        \${buildFAQItem('Should I use a raw M3U8 URL or Xtream Codes?', 'Use Xtream Codes whenever the player supports it. It is faster, uses less memory, and updates the playlist automatically without re downloading the whole file every time the app launches. A raw M3U8 URL works as a fallback for older players, but it is slower on device and can cause freezes on low end Firesticks and budget Android boxes.', false, 3)}
-        \${buildFAQItem('Why does my IPTV playlist buffer during live sports?', 'If the buffering only happens during big events like the NFL playoffs or NBA Finals, the issue is usually server overload on the provider side, not the M3U8 format itself. M3U8 handles high traffic events well when the server behind it is properly engineered. DODO IPTV uses dedicated US edge nodes with anti freeze load balancing, so live sports stay smooth even at peak hours. If a provider buffers during every primetime event, that is a sign their infrastructure is undersized.', false, 4)}
-        \${buildFAQItem('Can I use the same M3U8 playlist on multiple devices?', 'Yes. You can install IBO Player Pro or IPTV Smarters Pro on unlimited devices with the same credentials. What matters is how many simultaneous streams your plan supports. Our 1 screen plan is fine for a single viewer, and we offer 2 screen and 3 screen plans for households that want to watch different things at once.', false, 5)}
+        ${buildFAQItem('What is an M3U8 file in simple terms?', 'An M3U8 file is a plain text playlist that describes how an IPTV stream should be delivered. It lists the URLs the player needs to fetch, along with metadata about bitrates, durations, and stream variants. Your IPTV player reads the M3U8 and builds the channel interface you actually use. Without an M3U8 or Xtream Codes login, the player has nothing to display.', true, 0)}
+        ${buildFAQItem('Is M3U8 better than M3U?', 'Yes, in almost every way that matters. M3U8 uses UTF-8 encoding so international channel names display correctly, supports HLS natively for smooth live streaming, and handles adaptive bitrate so the picture can switch quality without freezing. M3U is the older format and cannot match any of that. Every serious IPTV service today uses M3U8.', false, 1)}
+        ${buildFAQItem('Do I need to understand M3U8 to use DODO IPTV?', 'No. Once your DODO TV subscription is live, the M3U8 sits behind the scenes. Your player handles everything automatically. You only need to understand the format if you are troubleshooting a specific issue, or if you are manually loading credentials into a player for the first time. Our support team does the technical side for every new subscriber on WhatsApp.', false, 2)}
+        ${buildFAQItem('Should I use a raw M3U8 URL or Xtream Codes?', 'Use Xtream Codes whenever the player supports it. It is faster, uses less memory, and updates the playlist automatically without re downloading the whole file every time the app launches. A raw M3U8 URL works as a fallback for older players, but it is slower on device and can cause freezes on low end Firesticks and budget Android boxes.', false, 3)}
+        ${buildFAQItem('Why does my IPTV playlist buffer during live sports?', 'If the buffering only happens during big events like the NFL playoffs or NBA Finals, the issue is usually server overload on the provider side, not the M3U8 format itself. M3U8 handles high traffic events well when the server behind it is properly engineered. DODO IPTV uses dedicated US edge nodes with anti freeze load balancing, so live sports stay smooth even at peak hours. If a provider buffers during every primetime event, that is a sign their infrastructure is undersized.', false, 4)}
+        ${buildFAQItem('Can I use the same M3U8 playlist on multiple devices?', 'Yes. You can install IBO Player Pro or IPTV Smarters Pro on unlimited devices with the same credentials. What matters is how many simultaneous streams your plan supports. Our 1 screen plan is fine for a single viewer, and we offer 2 screen and 3 screen plans for households that want to watch different things at once.', false, 5)}
       </div>
 
       <h2>One Last Thing</h2>
@@ -1513,61 +1513,7 @@ export const blogPosts: BlogPost[] = [
     `,
   },
 
-const ARTICLE_STYLE_BLOCK = `
-<style>
-  .article-content { line-height: 1.75; color: #2d3748; font-size: 1.0625rem; }
-  .article-content h2 { font-size: 1.65rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #1a202c; font-weight: 700; }
-  .article-content h3 { font-size: 1.3rem; margin-top: 2rem; margin-bottom: 0.75rem; color: #1a202c; font-weight: 600; }
-  .article-content p { margin-bottom: 1.25rem; }
-  .article-content a { color: #2563eb; text-decoration: underline; }
-  .article-content ul { margin-bottom: 1.25rem; padding-left: 1.5rem; }
-  .article-content li { margin-bottom: 0.5rem; }
-  .hero-callout { background: #f0f7ff; border-left: 4px solid #2563eb; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 2rem; font-size: 1.05rem; }
-  .info-box { background: #f7fafc; border: 1px solid #e2e8f0; padding: 1.25rem; border-radius: 0.5rem; margin: 1.5rem 0; }
-  .comparison-table table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
-  .comparison-table th, .comparison-table td { border: 1px solid #e2e8f0; padding: 0.75rem; text-align: left; }
-  .comparison-table th { background: #f7fafc; font-weight: 600; }
-  .highlight { background: #fef08a; padding: 0.1rem 0.3rem; border-radius: 0.25rem; font-weight: 600; }
-  .article-image { width: 100%; height: auto; border-radius: 0.5rem; margin: 1.5rem 0; }
-  .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-  .feature-card { background: #f7fafc; padding: 1.25rem; border-radius: 0.5rem; border: 1px solid #e2e8f0; }
-  .feature-card h3 { font-size: 1.1rem; margin-top: 0; margin-bottom: 0.5rem; }
-  .feature-card p { margin-bottom: 0; font-size: 0.95rem; color: #4a5568; }
-  .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-  .pricing-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 1.25rem; text-align: center; }
-  .pricing-card-highlight { border-color: #2563eb; box-shadow: 0 0 0 2px #2563eb; }
-  .pricing-card-badge { font-size: 0.8rem; font-weight: 600; color: #2563eb; text-transform: uppercase; margin-bottom: 0.5rem; }
-  .pricing-card-price { font-size: 2rem; font-weight: 700; color: #1a202c; margin-bottom: 0.25rem; }
-  .pricing-card-meta { font-size: 0.85rem; color: #718096; margin-bottom: 1rem; }
-  .pricing-card-cta { display: inline-block; background: #2563eb; color: #fff; padding: 0.5rem 1rem; border-radius: 0.375rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
-  .faq-section-header { display: flex; align-items: center; gap: 1rem; margin-top: 2.5rem; margin-bottom: 1rem; }
-  .faq-section-header h2 { margin: 0; }
-  .faq-section-badge { background: #2563eb; color: #fff; font-size: 0.8rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 9999px; }
-  .faq-container { margin-top: 1rem; }
-  @media (max-width: 768px) { .article-content h2 { font-size: 1.4rem; } .article-content h3 { font-size: 1.15rem; } }
-</style>
-`;
-
-const buildFAQItem = (
-  question: string,
-  answer: string,
-  isOpen: boolean,
-  index: number
-): string => `
-<details class="faq-item" ${isOpen ? "open" : ""}>
-  <summary class="faq-question">
-    <span>${question}</span>
-    <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </summary>
-  <div class="faq-answer">
-    <p>${answer}</p>
-  </div>
-</details>
-`;
-
-export const article05 = {
+  {
   id: "5",
   slug: "best-iptv-for-firestick-2026",
   title: `Best IPTV for Firestick in 2026: Complete Guide to Streaming 4K Channels`,
@@ -1650,7 +1596,7 @@ export const article05 = {
         When comparing providers, always request a trial. A short test period reveals more about stream stability than any marketing page. DODO IPTV offers trial access so you can evaluate channel quality, EPG accuracy, and server performance before committing to a plan.
       </p>
 
-      <img src="/img/blog/article-05/image-01.webp" alt="Man relaxing on a couch watching an IPTV Smarters Pro interface on a large 4K television" class="article-image" />
+      <img src="/img/blog/article-05/application-IPTV-Smarters-Pro-1024x585.jpeg" alt="Man relaxing on a couch watching an IPTV Smarters Pro interface on a large 4K television" class="article-image" />
 
       <h2>How to Set Up IPTV on Firestick</h2>
 
@@ -1786,7 +1732,7 @@ export const article05 = {
         To review installation guides for other hardware, visit our <a href="/setup" class="internal-link">DODO IPTV setup guide</a>. You can also compare our full subscription tiers on our <a href="/pricing" class="internal-link">DODO IPTV pricing page</a>.
       </p>
 
-      <img src="/img/blog/article-05/image-02.webp" alt="Woman on a sofa watching the IPTV Smarters Pro home screen on a smart TV with a remote control in the foreground" class="article-image" />
+      <img src="/img/blog/article-05/Comment-activer-IPTV-Smarters-Pro-1.jpeg" alt="Woman on a sofa watching the IPTV Smarters Pro home screen on a smart TV with a remote control in the foreground" class="article-image" />
 
       <div class="faq-section-header">
         <h2>Frequently Asked Questions</h2>
@@ -1812,6 +1758,9 @@ export const article05 = {
         DODO IPTV combines US-based infrastructure, anti-freeze load balancing, and free setup assistance to make the process effortless. Explore our <a href="/pricing" class="internal-link">subscription plans</a> or reach out to our team to get your Firestick configured and start streaming today.
       </p>
 
-      <img src="/img/blog/article-05/image-03.webp" alt="Smartphone and TV remote on a table with a live IPTV broadcast playing on a mounted smart TV" class="article-image" />
+      <img src="/img/blog/article-05/connexion-IPTV-Smarters-Pro-1-1024x585.jpeg" alt="Smartphone and TV remote on a table with a live IPTV broadcast playing on a mounted smart TV" class="article-image" />
     `,
-};
+  },
+];
+
+export const article05 = blogPosts[4];
