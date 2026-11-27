@@ -1531,7 +1531,7 @@ export const blogPosts: BlogPost[] = [
     "best streaming player",
     "DODO IPTV subscription",
   ],
-  image: "/img/blog/article-05/cover.webp",
+  image: "/img/blog/article-05/cover.png",
   category: "setup",
   readTime: "12 min read",
   featured: true,
