@@ -1596,7 +1596,7 @@ export const blogPosts: BlogPost[] = [
         When comparing providers, always request a trial. A short test period reveals more about stream stability than any marketing page. DODO IPTV offers trial access so you can evaluate channel quality, EPG accuracy, and server performance before committing to a plan.
       </p>
 
-      <img src="/img/blog/article-05/application-IPTV-Smarters-Pro-1024x585.jpeg" alt="Man relaxing on a couch watching an IPTV Smarters Pro interface on a large 4K television" class="article-image" />
+      <img src="/img/blog/article-05/image-01.webp" alt="Man relaxing on a couch watching an IPTV Smarters Pro interface on a large 4K television" class="article-image" />
 
       <h2>How to Set Up IPTV on Firestick</h2>
 
@@ -1732,7 +1732,7 @@ export const blogPosts: BlogPost[] = [
         To review installation guides for other hardware, visit our <a href="/setup" class="internal-link">DODO IPTV setup guide</a>. You can also compare our full subscription tiers on our <a href="/pricing" class="internal-link">DODO IPTV pricing page</a>.
       </p>
 
-      <img src="/img/blog/article-05/Comment-activer-IPTV-Smarters-Pro-1.jpeg" alt="Woman on a sofa watching the IPTV Smarters Pro home screen on a smart TV with a remote control in the foreground" class="article-image" />
+      <img src="/img/blog/article-05/image-02.webp" alt="Woman on a sofa watching the IPTV Smarters Pro home screen on a smart TV with a remote control in the foreground" class="article-image" />
 
       <div class="faq-section-header">
         <h2>Frequently Asked Questions</h2>
@@ -1758,7 +1758,7 @@ export const blogPosts: BlogPost[] = [
         DODO IPTV combines US-based infrastructure, anti-freeze load balancing, and free setup assistance to make the process effortless. Explore our <a href="/pricing" class="internal-link">subscription plans</a> or reach out to our team to get your Firestick configured and start streaming today.
       </p>
 
-      <img src="/img/blog/article-05/connexion-IPTV-Smarters-Pro-1-1024x585.jpeg" alt="Smartphone and TV remote on a table with a live IPTV broadcast playing on a mounted smart TV" class="article-image" />
+      <img src="/img/blog/article-05/image-03.webp" alt="Smartphone and TV remote on a table with a live IPTV broadcast playing on a mounted smart TV" class="article-image" />
     `,
   },
 ];
